@@ -14,18 +14,19 @@ spec:
       labels:
         app: odoo
     spec:
-       containers:
-       - name: odoo
-         image: testmailqwer/odo:14
-         ports:
-         - containerPort: 8069
-         env:
-        - name: HOST
-          value: postgres
-        - name: USER
-          value: admin
-        - name: PASSWORD
-          value: root
+      containers:
+        - name: odoo
+          image: testmailqwer/odo:14
+          ports:
+            - containerPort: 8069
+          env:
+            - name: HOST
+              value: postgres
+            - name: USER
+              value: admin
+            - name: PASSWORD
+              value: root
+
 ---
 apiVersion: v1
 kind: Service
